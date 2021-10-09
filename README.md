@@ -36,3 +36,12 @@ async def get_matrix(url: str) -> List[int]:
 - Библиотека обрабатывает ошибки сервера и сетевые ошибки (Connection Timeout, Connection Refused, ...).
 
 - Библиотека должна сохраняет свою работоспособность на квадратных матрицах другой размерности.
+
+## Примечание для пользователей ОС Windows:
+
+Чтобы избежать ошибки __RuntimeError: Event loop is closed__, возникающей из-за различающихся циклов событий, перед вызовом функции __asyncio.run(get_matrix(URL))__ необходимо изменить политику цикла событий:
+
+```python
+if os.name == "nt":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+```
