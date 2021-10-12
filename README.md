@@ -35,7 +35,11 @@ async def get_matrix(url: str) -> List[int]:
 
 - Библиотека обрабатывает ошибки сервера и сетевые ошибки (Connection Timeout, Connection Refused, ...).
 
-- Библиотека должна сохраняет свою работоспособность на квадратных матрицах другой размерности.
+- Библиотека сохраняет свою работоспособность на квадратных матрицах другой размерности.
+
+# [Реализация](https://github.com/Allswbr/matrix-into-a-list-in-a-spiral/blob/main/get_matrix/get_matrix.py)
+
+# [Тестирование](https://github.com/Allswbr/matrix-into-a-list-in-a-spiral/blob/main/get_matrix/test.py)
 
 ## Примечание для пользователей ОС Windows:
 
